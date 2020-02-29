@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise; // moongose.Promisse está depreciado, 
-module.exports = mongoose.createConnection('mongodb://localhost/temconta', { useNewUrlParser: true })
+module.exports = mongoose.createConnection('mongodb://localhost/temconta', { useNewUrlParser: true, useUnifiedTopology: true })
 
 mongoose.Error.messages.general.required = 
     "O atributo '{PATH}' é obrigatório.";
